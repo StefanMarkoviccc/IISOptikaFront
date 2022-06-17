@@ -30,6 +30,12 @@ export class ApiService {
   addWorkingHour(data: any){
     return this.http.post(this.url + '/api/workingHours/add', data);
   }
+  addAppointment(data: any){
+    return this.http.post(this.url + '/api/appointment/add', data);
+  }
+  addRecipe(data: any){
+    return this.http.post(this.url + '/api/recipe/add', data);
+  }
   editProfile(data: any){
     return this.http.put(this.url + '/api/user/' + data.id, data, this.generateHeader());
   }

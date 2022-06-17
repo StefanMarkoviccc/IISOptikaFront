@@ -28,6 +28,11 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { SeeAppointmentComponent } from './see-appointment/see-appointment.component';
 import { WorkingHourComponent } from './working-hour/working-hour.component';
 import { AddWorkingHourComponent } from './add-working-hour/add-working-hour.component';
+import { SisterHomePageComponent } from './sister-home-page/sister-home-page.component';
+import { ScheduleAppointmentComponent } from './schedule-appointment/schedule-appointment.component';
+import { HealthCardComponent } from './health-card/health-card.component';
+import { RecipeComponent } from './recipe/recipe.component';
+import { PrescribeTherapyComponent } from './prescribe-therapy/prescribe-therapy.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +43,12 @@ import { AddWorkingHourComponent } from './add-working-hour/add-working-hour.com
     EditProfileComponent,
     SeeAppointmentComponent,
     WorkingHourComponent,
-    AddWorkingHourComponent
+    AddWorkingHourComponent,
+    SisterHomePageComponent,
+    ScheduleAppointmentComponent,
+    HealthCardComponent,
+    RecipeComponent,
+    PrescribeTherapyComponent
   ],
   imports: [
     BrowserModule,

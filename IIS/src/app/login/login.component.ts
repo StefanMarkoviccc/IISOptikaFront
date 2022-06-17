@@ -10,6 +10,7 @@ import { ApiService } from '../api.service';
 export class LoginComponent implements OnInit {
 
   form: FormGroup;
+  user: any;
 
   constructor(private formBuilder: FormBuilder, private api: ApiService, private router: Router) 
   {
@@ -31,14 +32,18 @@ export class LoginComponent implements OnInit {
     }).subscribe((response: any) => {
       console.log(response);
       localStorage.setItem('token', response.token)
+ 
+     this.api.getCurrentUser().subscribe((response2: any) => {
 
-      this.api.getCurrentUser().subscribe((response2: any) => {
 
-        console.log(response2);
+      localStorage.setItem('user', JSON.stringify(response2))
 
-        localStorage.setItem('user', JSON.stringify(response2))
-
+      this.user = this.api.getUserFromLocalstorage();
+      if(this.user.userType == 0){
         this.router.navigate(['/user-home-page']);
+      }else{
+        this.router.navigate(['/sister-home-page']);
+      }
     }); 
       
 

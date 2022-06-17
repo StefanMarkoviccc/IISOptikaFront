@@ -7,6 +7,12 @@ import { UserHomePageComponent } from './user-home-page/user-home-page.component
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { WorkingHourComponent } from './working-hour/working-hour.component';
 import { AddWorkingHourComponent } from './add-working-hour/add-working-hour.component';
+import { SisterHomePageComponent } from './sister-home-page/sister-home-page.component';
+import { ScheduleAppointmentComponent } from './schedule-appointment/schedule-appointment.component';
+import { SeeAppointmentComponent } from './see-appointment/see-appointment.component';
+import { HealthCardComponent } from './health-card/health-card.component';
+import { RecipeComponent } from './recipe/recipe.component';
+import { PrescribeTherapyComponent } from './prescribe-therapy/prescribe-therapy.component';
 
 
 const routes: Routes = [
@@ -17,6 +23,12 @@ const routes: Routes = [
   {path: 'edit-profile', component: EditProfileComponent},
   {path: 'working-hour', component:WorkingHourComponent},
   {path: 'add-working-hour', component:AddWorkingHourComponent},
+  {path: 'sister-home-page', component:SisterHomePageComponent},
+  {path: 'schedule-Appointment', component: ScheduleAppointmentComponent},
+  {path: 'see-appointment', component: SeeAppointmentComponent},
+  {path: 'health-card', component: HealthCardComponent},
+  {path: 'recipe', component: RecipeComponent},
+  {path: 'prescribe-therapy',component: PrescribeTherapyComponent},
 ];
 
 

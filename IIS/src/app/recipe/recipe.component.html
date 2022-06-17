@@ -11,19 +11,16 @@
             <mat-card>
                 <mat-card-content>
                     <form [formGroup]="form" (ngSubmit)="onSubmit()">
-                        <h2>New</h2>
+                        <h2>Prescribe recipe</h2>
                         <mat-form-field>
-                            <input matInput placeholder="Patient" formControlName="patient" required>
+                            <input matInput placeholder="MedicineName" formControlName="medicineName" required>
+                        </mat-form-field>    
+                        <mat-form-field>
+                            <input matInput placeholder="TakingPeriod" formControlName="takingPeriod" required>
+                        </mat-form-field>      
+                        <mat-form-field>
+                            <input matInput placeholder="Quantity" formControlName="quantity" required>
                         </mat-form-field>       
-                        <mat-form-field>
-                            <input matInput placeholder="Date" formControlName="date" required>
-                        </mat-form-field>        
-                        <mat-form-field>
-                            <input matInput placeholder="StartTime" formControlName="startTime" required>
-                        </mat-form-field>
-                        <mat-form-field>
-                            <input matInput placeholder="TypeOfAppointment" formControlName="typeOfAppointment" required>
-                        </mat-form-field>
                         <button mat-raised-button color="primary">Schedule</button>
                     </form>
                 </mat-card-content>

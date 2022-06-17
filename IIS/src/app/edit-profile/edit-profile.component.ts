@@ -73,7 +73,11 @@ export class EditProfileComponent implements OnInit {
       this.router.navigate(['/edit-profile']);
     }
     else if(data === 'home'){
-      this.router.navigate(['/user-home-page']);
+      if(this.user.userType == 0){
+        this.router.navigate(['/user-home-page']);
+      }else{
+        this.router.navigate(['/sister-home-page']);
+      }
     }
   }
 }

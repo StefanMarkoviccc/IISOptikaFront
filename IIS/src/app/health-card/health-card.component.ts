@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
-  selector: 'app-see-appointment',
-  templateUrl: './see-appointment.component.html',
-  styleUrls: ['./see-appointment.component.css']
+  selector: 'app-health-card',
+  templateUrl: './health-card.component.html',
+  styleUrls: ['./health-card.component.css']
 })
-export class SeeAppointmentComponent implements OnInit {
+export class HealthCardComponent implements OnInit {
 
   selectedType: any;
   form: FormGroup;
@@ -16,10 +16,11 @@ export class SeeAppointmentComponent implements OnInit {
   
   constructor(private formBuilder: FormBuilder, private api: ApiService, private router: Router) {
     this.form = this.formBuilder.group({
-      patient: ['', Validators.required],
+      name: ['', Validators.required],
       date: ['', Validators.required],
-      startTime: ['', Validators.required ],
-      typeOfAppointment: ['', Validators.required],
+      email: ['', Validators.email ],
+      phone: ['', Validators.required],
+      anamnesis: ['', Validators.required],
     });
 
     let jsonUser = localStorage.getItem('user');
@@ -37,10 +38,11 @@ export class SeeAppointmentComponent implements OnInit {
       console.log(response);
 
       this.form = this.formBuilder.group({
-      patient: [response.patient, Validators.email],
+      patient: [response.patient.name, Validators.required],
       date: [response.date, Validators.required],
-      startTime: [response.startTime, Validators.required ],
-      typeOfAppointment: [response.typeOfAppointment, Validators.required],
+      email: [response.email, Validators.email ],
+      phone: [response.phone, Validators.required],
+      anamnesis: [response.anamnesis, Validators.required],
 
     });
   });  
@@ -64,4 +66,5 @@ export class SeeAppointmentComponent implements OnInit {
 
     
   }
+
 }

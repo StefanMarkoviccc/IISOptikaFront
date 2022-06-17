@@ -11,7 +11,7 @@
             <mat-card>
                 <mat-card-content>
                     <form [formGroup]="form" (ngSubmit)="onSubmit()">
-                        <h2>New</h2>
+                        <h2>Schedule appointment</h2>
                         <mat-form-field>
                             <input matInput placeholder="Patient" formControlName="patient" required>
                         </mat-form-field>       
@@ -22,8 +22,8 @@
                             <input matInput placeholder="StartTime" formControlName="startTime" required>
                         </mat-form-field>
                         <mat-form-field>
-                            <input matInput placeholder="TypeOfAppointment" formControlName="typeOfAppointment" required>
-                        </mat-form-field>
+                            <input matInput placeholder="Duration" formControlName="duration" required>
+                        </mat-form-field>               
                         <button mat-raised-button color="primary">Schedule</button>
                     </form>
                 </mat-card-content>
