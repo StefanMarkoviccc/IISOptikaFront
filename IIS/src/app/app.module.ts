@@ -25,6 +25,9 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { UserHomePageComponent } from './user-home-page/user-home-page.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { SeeAppointmentComponent } from './see-appointment/see-appointment.component';
+import { WorkingHourComponent } from './working-hour/working-hour.component';
+import { AddWorkingHourComponent } from './add-working-hour/add-working-hour.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
     LoginComponent,
     RegistrationComponent,
     UserHomePageComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    SeeAppointmentComponent,
+    WorkingHourComponent,
+    AddWorkingHourComponent
   ],
   imports: [
     BrowserModule,

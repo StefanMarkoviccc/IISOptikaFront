@@ -12,6 +12,8 @@ export class UserHomePageComponent implements OnInit {
 
   form: FormGroup;
   user: any;
+  appointments: any;
+  displayedColumns: string[] = ['Date', 'StartTime', 'Duration', 'Patient'];
 
 
   constructor(private formBuilder: FormBuilder, private api : ApiService, private activatedRoute: ActivatedRoute, private router: Router) 
@@ -22,7 +24,9 @@ export class UserHomePageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+    this.api.getAllAppointments().subscribe((response: any)=> {
+      this.appointments = response;
+    })
   }
 
 
@@ -30,12 +34,15 @@ export class UserHomePageComponent implements OnInit {
 
   }
 
+
   navigate(data : any){
     if(data === 'edit'){
       this.router.navigate(['/edit-profile']);
     }
     else if(data === 'home'){
       this.router.navigate(['/user-home-page']);
+    }else if(data == 'workigHours'){
+      this.router.navigate(['/working-hour']);
     }
   }
 

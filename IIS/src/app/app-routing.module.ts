@@ -5,6 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { RegistrationComponent } from './registration/registration.component';
 import { UserHomePageComponent } from './user-home-page/user-home-page.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { WorkingHourComponent } from './working-hour/working-hour.component';
+import { AddWorkingHourComponent } from './add-working-hour/add-working-hour.component';
 
 
 const routes: Routes = [
@@ -13,6 +15,8 @@ const routes: Routes = [
   {path: 'registration', component: RegistrationComponent},
   {path: 'user-home-page', component: UserHomePageComponent},
   {path: 'edit-profile', component: EditProfileComponent},
+  {path: 'working-hour', component:WorkingHourComponent},
+  {path: 'add-working-hour', component:AddWorkingHourComponent},
 ];
 
 

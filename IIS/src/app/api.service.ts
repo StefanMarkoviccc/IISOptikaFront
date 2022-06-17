@@ -18,8 +18,17 @@ export class ApiService {
   getAllUsers() {
     return this.http.get(this.url + '/api/all', this.generateHeader());
   }
+  getAllWorkingHours() {
+    return this.http.get(this.url + '/api/workingHours/all', this.generateHeader());
+  }
+  getAllAppointments() {
+    return this.http.get(this.url + '/api/appointment/all', this.generateHeader());
+  }
   getUser(data: any){
     return this.http.get(this.url + '/api/user/' + data.id, this.generateHeader());
+  }
+  addWorkingHour(data: any){
+    return this.http.post(this.url + '/api/workingHours/add', data);
   }
   editProfile(data: any){
     return this.http.put(this.url + '/api/user/' + data.id, data, this.generateHeader());
